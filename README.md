@@ -1,6 +1,6 @@
 # Poker Game
 
-This is a simple implementation of a poker game in Python. The game allows multiple players to participate and includes basic poker rules.
+A simple Texas Hold'em poker game implemented in Python.
 
 ## Project Structure
 
@@ -17,26 +17,31 @@ poker-game
 
 ## Requirements
 
-To run this project, you need to install the required dependencies. You can do this by running:
+- Flask==2.0.1
+- numpy==1.21.0
+- matplotlib==3.4.2
 
-```
-pip install -r requirements.txt
-```
+## How to Run
 
-## How to Run the Game
+1. **Clone the repository**:
+    ```bash
+    git clone <your-repository-url>
+    cd poker-game
+    ```
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
-2. Navigate to the project directory:
-   ```
-   cd poker-game
-   ```
-3. Run the game:
-   ```
-   python src/main.py
-   ```
+2. **Install the required packages**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. **Run the game**:
+    ```bash
+    python3 src/main.py
+    ```
+
+## Game Description
+
+This is a simple implementation of Texas Hold'em poker. Each player is dealt two private cards, and five community cards are dealt in stages. The game determines the winner based on the best hand according to poker hand rankings.
 
 ## Game Rules
 
