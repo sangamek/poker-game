@@ -43,10 +43,25 @@ poker-game
 
 This is a simple implementation of Texas Hold'em poker. Each player is dealt two private cards, and five community cards are dealt in stages. The game determines the winner based on the best hand according to poker hand rankings.
 
+
 ## Game Rules
 
 - Each player is dealt a hand of cards.
 - Players take turns to bet, call, raise, or fold.
 - The game continues until a winner is determined based on the poker hand rankings.
+
+## Unit Test Scenarios
+The unit tests cover the following scenarios:
+
+High card
+Pair
+Two pair
+Three of a kind
+Straight
+Flush
+Full house
+Four of a kind
+Straight flush
+Tie
 
 Enjoy playing poker!

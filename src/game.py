@@ -40,6 +40,7 @@ class PokerGame:
         def hand_rank(hand):
             ranks = '23456789TJQKA'
             rank_dict = {r: i for i, r in enumerate(ranks, start=2)}
+            rank_dict['10'] = rank_dict['T']  # Handle '10' correctly
             hand = sorted(hand, key=lambda card: rank_dict[card[0]], reverse=True)
             counts = Counter(card[0] for card in hand)
             counts = sorted(counts.items(), key=lambda x: (x[1], rank_dict[x[0]]), reverse=True)
@@ -103,7 +104,7 @@ class PokerGame:
                     img = mpimg.imread(placeholder_path)
                 ax[i, j].imshow(img)
                 ax[i, j].axis('off')
-                if card in winning_hand:
+                if winning_hand and card in winning_hand:
                     ax[i, j].set_title('Winner', color='red')
 
         for j, card in enumerate(self.community_cards):
@@ -117,7 +118,7 @@ class PokerGame:
                 img = mpimg.imread(placeholder_path)
             ax[2, j].imshow(img)
             ax[2, j].axis('off')
-            if card in winning_hand:
+            if winning_hand and card in winning_hand:
                 ax[2, j].set_title('Winner', color='red')
 
         # Remove empty subplots
