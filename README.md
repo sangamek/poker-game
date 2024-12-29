@@ -53,15 +53,15 @@ This is a simple implementation of Texas Hold'em poker. Each player is dealt two
 ## Unit Test Scenarios
 The unit tests cover the following scenarios:
 
-High card
-Pair
-Two pair
-Three of a kind
-Straight
-Flush
-Full house
-Four of a kind
-Straight flush
-Tie
+- High card
+- Pair
+- Two pair
+- Three of a kind
+- Straight
+- Flush
+- Full house
+- Four of a kind
+- Straight flush
+- Tie
 
 Enjoy playing poker!
