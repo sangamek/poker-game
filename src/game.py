@@ -94,6 +94,8 @@ class PokerGame:
         for i, player in enumerate(self.players):
             for j, card in enumerate(player.hand):
                 card_filename = f"{card[0]}_of_{card[1].lower()}.png"
+                if card[0] == 'Joker':
+                    card_filename = f"{card[1].lower()}_joker.png"
                 card_path = os.path.join(card_dir, card_filename)
                 if os.path.exists(card_path):
                     img = mpimg.imread(card_path)
@@ -106,6 +108,8 @@ class PokerGame:
 
         for j, card in enumerate(self.community_cards):
             card_filename = f"{card[0]}_of_{card[1].lower()}.png"
+            if card[0] == 'Joker':
+                card_filename = f"{card[1].lower()}_joker.png"
             card_path = os.path.join(card_dir, card_filename)
             if os.path.exists(card_path):
                 img = mpimg.imread(card_path)
